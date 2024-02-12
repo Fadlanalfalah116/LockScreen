@@ -53,4 +53,11 @@ public class LockScreenActivity extends AppCompatActivity {
         mDevicePolicyManager.lockNow();
         finish();
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.exit_anim, 0); // Terapkan animasi keluar
+    }
+
 }
